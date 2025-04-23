@@ -1,0 +1,47 @@
+{
+  "name": "crud-generator",
+  "scopeName": "source.crud-generator",
+  "fileTypes": [
+    ".crudg"
+  ],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "name": "keyword.control.crud-generator",
+      "match": "\\b(INT|STRING|entity)\\b"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.block.crud-generator",
+          "begin": "/\\*",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.crud-generator"
+            }
+          },
+          "end": "\\*/",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.crud-generator"
+            }
+          }
+        },
+        {
+          "begin": "//",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.whitespace.comment.leading.crud-generator"
+            }
+          },
+          "end": "(?=$)",
+          "name": "comment.line.crud-generator"
+        }
+      ]
+    }
+  }
+}
